@@ -2,6 +2,16 @@
 	"name": "Event sheet 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Moving",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 762369728634541
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movement",
@@ -81,13 +91,13 @@
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "Enemy",
-							"sid": 140787516902691
+							"objectClass": "Spear",
+							"sid": 397605132816303
 						},
 						{
 							"id": "destroy",
-							"objectClass": "Spear",
-							"sid": 397605132816303
+							"objectClass": "Enemy",
+							"sid": 876311972931123
 						}
 					],
 					"sid": 489604258156009
@@ -106,12 +116,12 @@
 					],
 					"actions": [
 						{
-							"id": "set-speed",
+							"id": "set-enabled",
 							"objectClass": "Spear",
-							"sid": 554772939217580,
+							"sid": 185535935985753,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"speed": "0"
+								"state": "disabled"
 							}
 						}
 					],
@@ -139,18 +149,75 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 708322821397460,
+					"children": [
 						{
-							"id": "set-speed",
-							"objectClass": "Spear",
-							"sid": 266836653769162,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"speed": "15"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 391956229921575,
+									"parameters": {
+										"variable": "Moving"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Spear",
+									"sid": 853703033673498,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "15"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 730456688523630,
+									"parameters": {
+										"variable": "Moving",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 491469680511098
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 949696384171663
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Spear",
+									"sid": 649203374976929,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "400"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 675539145542367,
+									"parameters": {
+										"variable": "Moving",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 364428721424642
 						}
-					],
-					"sid": 708322821397460
+					]
 				},
 				{
 					"eventType": "block",
@@ -186,7 +253,60 @@
 							}
 						}
 					],
-					"sid": 675700899580163
+					"sid": 675700899580163,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 978655335229518,
+									"parameters": {
+										"variable": "Moving"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Spear",
+									"sid": 359014800202269,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "400"
+									}
+								}
+							],
+							"sid": 475822040737839
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 512607307092562,
+									"parameters": {
+										"variable": "Moving"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-speed",
+									"objectClass": "Spear",
+									"sid": 755851614315083,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "15"
+									}
+								}
+							],
+							"sid": 410177448620766
+						}
+					]
 				}
 			],
 			"sid": 762274948391941
