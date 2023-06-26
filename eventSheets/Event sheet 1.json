@@ -1,0 +1,338 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 639026545117595,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Aion",
+							"sid": 870668843082229,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 527789935673008
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 997537664808217,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Aion",
+							"sid": 783622052408840,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 243770127216464
+				}
+			],
+			"sid": 577574016910866
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collision",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 650697604812552,
+							"parameters": {
+								"object": "Spear"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemy",
+							"sid": 140787516902691
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Spear",
+							"sid": 397605132816303
+						}
+					],
+					"sid": 489604258156009
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spear",
+							"sid": 930913223188274,
+							"parameters": {
+								"object": "Ground"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Spear",
+							"sid": 554772939217580,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "0"
+							}
+						}
+					],
+					"sid": 796393504368078
+				}
+			],
+			"sid": 489695648180693
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Action keys",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 444068729537626,
+							"parameters": {
+								"key": 17
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Spear",
+							"sid": 266836653769162,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "15"
+							}
+						}
+					],
+					"sid": 708322821397460
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 536598814643216,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Aion",
+							"sid": 847480550092987,
+							"parameters": {
+								"object": "Spear",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Spear",
+							"sid": 567782704314907,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 675700899580163
+				}
+			],
+			"sid": 762274948391941
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Animations",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-speed",
+							"objectClass": "Aion",
+							"sid": 155606448943097,
+							"behaviorType": "Platform",
+							"parameters": {
+								"comparison": 0,
+								"speed": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Aion",
+							"sid": 775870814886021,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 589950799089250
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-speed",
+							"objectClass": "Aion",
+							"sid": 578876358784263,
+							"behaviorType": "Platform",
+							"parameters": {
+								"comparison": 0,
+								"speed": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Aion",
+							"sid": 827391977778518,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 493088461111819
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Enemy",
+							"sid": 292069346410040,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 942085275184484
+				}
+			],
+			"sid": 485790582154003
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Camera",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "Aion",
+							"sid": 683048186947290,
+							"parameters": {
+								"first-angle": "TiledBackground.Angle",
+								"second-angle": "45"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Aion",
+							"sid": 792576509959605,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 626538207172614
+				}
+			],
+			"sid": 123962581686346
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Spear",
+					"sid": 399916707902055
+				},
+				{
+					"id": "is-mirrored",
+					"objectClass": "Aion",
+					"sid": 395955124076504
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Spear",
+					"sid": 134382690896598,
+					"parameters": {
+						"angle": "180"
+					}
+				}
+			],
+			"sid": 658232645839618
+		}
+	],
+	"sid": 205840454689970
+}

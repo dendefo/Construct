@@ -1,0 +1,65 @@
+{
+	"name": "Spear",
+	"plugin-id": "Sprite",
+	"sid": 673866914242057,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 439171999229779
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 879716545120544
+		},
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 222089910684230
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 6189,
+						"height": 517,
+						"originX": 0.392,
+						"originY": 0.536,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 93989,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.7286342635606664,
+								1,
+								0.7633191204255512,
+								1,
+								0.16440982191428882,
+								0,
+								0.22257459939333088
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 546993697029126,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

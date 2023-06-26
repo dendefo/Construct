@@ -1,0 +1,1195 @@
+{
+	"name": "Aion",
+	"plugin-id": "Sprite",
+	"sid": 383363260058846,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 881248813750908
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 220541163926914
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 506880065715478
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 155,
+						"height": 125,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8801965,
+						"collisionPoly": {
+							"points": [
+								0.017204694850470433,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.00860267557123656,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 137,
+						"height": 131,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1551459,
+						"collisionPoly": {
+							"points": [
+								0.01948905109489051,
+								0,
+								1,
+								0,
+								1,
+								0.9541984732824428,
+								0.009708029197080293,
+								0.9541984732824428
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 125,
+						"height": 146,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3098073,
+						"collisionPoly": {
+							"points": [
+								0.02136,
+								0,
+								1,
+								0,
+								1,
+								0.8561643835616438,
+								0.01064,
+								0.8561643835616438
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 146,
+						"height": 182,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6911235,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 284,
+						"height": 251,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2780586,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 221,
+						"height": 245,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9629932,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 218,
+						"height": 221,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6341741,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 212,
+						"height": 116,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6466516,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 173,
+						"height": 131,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9857413,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 101,
+						"height": 134,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8677985,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 182,
+						"height": 134,
+						"originX": 0.7290322580645161,
+						"originY": 0.456,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5090592,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9708029197080292,
+								"y": 0.5267175572519084
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 536443954843085,
+				"name": "Attack",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 13
+			},
+			{
+				"frames": [
+					{
+						"width": 176,
+						"height": 134,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6514850,
+						"collisionPoly": {
+							"points": [
+								0.5204547535289414,
+								0,
+								1,
+								0,
+								1,
+								0.9791043409660677,
+								0.5159100619229374,
+								0.9850746268656716
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 188,
+						"height": 131,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4511285,
+						"collisionPoly": {
+							"points": [
+								0.4712767905377324,
+								0.004579150949725668,
+								0.9308530117603001,
+								0,
+								0.9478714313912868,
+								1,
+								0.467022185629984,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 182,
+						"height": 134,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1023440,
+						"collisionPoly": {
+							"points": [
+								0.47032987154447087,
+								0,
+								0.9450569572029474,
+								0,
+								0.9626364236349557,
+								0.9791043409660677,
+								0.46593500493646695,
+								0.9850746268656716
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 173,
+						"height": 131,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6791581,
+						"collisionPoly": {
+							"points": [
+								0.5121389400063219,
+								0,
+								1,
+								0,
+								1,
+								0.9786258144233059,
+								0.507515438719289,
+								0.9847328244274809
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 176,
+						"height": 134,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8211527,
+						"collisionPoly": {
+							"points": [
+								0.5204547535289414,
+								0,
+								1,
+								0,
+								1,
+								0.9791043409660677,
+								0.5159100619229374,
+								0.9850746268656716
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 176,
+						"height": 131,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4732360,
+						"collisionPoly": {
+							"points": [
+								0.5204547535289414,
+								0.004579150949725668,
+								1,
+								0,
+								1,
+								1,
+								0.5159100619229374,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 176,
+						"height": 134,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3327258,
+						"collisionPoly": {
+							"points": [
+								0.5204547535289414,
+								0,
+								1,
+								0,
+								1,
+								0.9791043409660677,
+								0.5159100619229374,
+								0.9850746268656716
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 176,
+						"height": 131,
+						"originX": 0.7784090909090909,
+						"originY": 0.44029850746268656,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1291077,
+						"collisionPoly": {
+							"points": [
+								0.5204547535289414,
+								0,
+								1,
+								0,
+								1,
+								0.9786258144233059,
+								0.5159100619229374,
+								0.9847328244274809
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 711376819474914,
+				"name": "Run",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 10
+			},
+			{
+				"frames": [
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2407454,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9549515,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1776673,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7256645,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9853163,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6558764,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2934739,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 200,
+						"height": 145,
+						"originX": 0.78,
+						"originY": 0.5103448275862069,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2422303,
+						"collisionPoly": {
+							"points": [
+								0.5047804591419929,
+								0,
+								0.9895075829474421,
+								0,
+								0.9975000381469726,
+								1,
+								0.5078856688279343,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 263616431053636,
+				"name": "Idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 4
+			},
+			{
+				"frames": [
+					{
+						"width": 194,
+						"height": 122,
+						"originX": 0.7164948453608248,
+						"originY": 0.5737704918032787,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7949717,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 155,
+						"height": 155,
+						"originX": 0.7677419354838709,
+						"originY": 0.4645161290322581,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8653486,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 155,
+						"height": 155,
+						"originX": 0.7806451612903226,
+						"originY": 0.4645161290322581,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9578068,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 155,
+						"height": 155,
+						"originX": 0.7935483870967742,
+						"originY": 0.4645161290322581,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8145172,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 155,
+						"height": 155,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2160081,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 155,
+						"height": 155,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3499564,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 155,
+						"height": 155,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4130294,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 176,
+						"height": 134,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3323711,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 182,
+						"height": 140,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2531092,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 179,
+						"height": 155,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3142088,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 167,
+						"height": 185,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9191509,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 164,
+						"height": 185,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9141529,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 164,
+						"height": 185,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8735678,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 167,
+						"height": 185,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2968429,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 164,
+						"height": 185,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1472007,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 164,
+						"height": 185,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4616692,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 164,
+						"height": 185,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4502922,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 194,
+						"height": 122,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3622747,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 185,
+						"height": 128,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1737367,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					},
+					{
+						"width": 182,
+						"height": 134,
+						"originX": 0.5225806451612903,
+						"originY": 0.512,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5677038,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "SpearSpawn",
+								"x": 0.9419354838709677,
+								"y": 0.496
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 157207804245283,
+				"name": "Jump",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

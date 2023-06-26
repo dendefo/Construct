@@ -1,0 +1,246 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "FullScreened",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 588506632188519
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 705132395510752
+				}
+			],
+			"actions": [
+				{
+					"id": "load-stylesheet",
+					"objectClass": "Browser",
+					"sid": 639993892441858,
+					"parameters": {
+						"url": "\"button.css\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 809804810739004,
+					"parameters": {
+						"audio-file": "Savage wind (320 kbps)",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"Main Theme\""
+					}
+				}
+			],
+			"sid": 336294994864751
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "StartGame",
+					"sid": 734626976744996
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 422172569470460,
+					"parameters": {
+						"layout": "Main Game"
+					}
+				}
+			],
+			"sid": 283689272728843
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Leave",
+					"sid": 801964996701147
+				}
+			],
+			"actions": [
+				{
+					"id": "close",
+					"objectClass": "Browser",
+					"sid": 314156606665964
+				}
+			],
+			"sid": 918298200030978
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Settings",
+					"sid": 605949876940394
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 300987716180761,
+					"parameters": {
+						"layer": "1",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 886637886114660,
+					"parameters": {
+						"layer": "0",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 254650058866429
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "BackButton",
+					"sid": 326973028254569
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 742674964600409,
+					"parameters": {
+						"layer": "1",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 619885972383017,
+					"parameters": {
+						"layer": "0",
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 683256010899077
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "FullScreen",
+					"sid": 845026602409482
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 853124277377826,
+					"parameters": {
+						"variable": "FullScreened"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 709987283512274,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "auto"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 533046276033329,
+					"parameters": {
+						"variable": "FullScreened",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 731230108169587
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "FullScreen",
+					"sid": 911884610233535
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 128473920887318,
+					"parameters": {
+						"variable": "FullScreened"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "cancel-fullscreen",
+					"objectClass": "Browser",
+					"sid": 932400880799032
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 881342588320584,
+					"parameters": {
+						"variable": "FullScreened",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 983977899097679
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-changing",
+					"objectClass": "SliderBar",
+					"sid": 168914697940773
+				}
+			],
+			"actions": [
+				{
+					"id": "set-master-volume",
+					"objectClass": "Audio",
+					"sid": 464948168517494,
+					"parameters": {
+						"db": "-(100-SliderBar.Value)/3.14"
+					}
+				}
+			],
+			"sid": 775830770420312
+		}
+	],
+	"sid": 284588980641219
+}

@@ -1,0 +1,108 @@
+{
+	"name": "Enemy",
+	"plugin-id": "Sprite",
+	"sid": 726420516390106,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 909251963301328
+		},
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 752812233129087
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 74,
+						"height": 104,
+						"originX": 0.4594594594594595,
+						"originY": -0.6538461538461539,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 803524,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 77,
+						"height": 107,
+						"originX": 0.44155844155844154,
+						"originY": -0.6074766355140186,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2405821,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 74,
+						"height": 107,
+						"originX": 0.4594594594594595,
+						"originY": -0.6074766355140186,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 784157,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 74,
+						"height": 107,
+						"originX": 0.4594594594594595,
+						"originY": -0.6074766355140186,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4567664,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 71,
+						"height": 104,
+						"originX": 0.4788732394366197,
+						"originY": -0.6538461538461539,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9933174,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 74,
+						"height": 104,
+						"originX": 0.4594594594594595,
+						"originY": -0.6538461538461539,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8393915,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 861523729538115,
+				"name": "Idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
