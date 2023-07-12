@@ -1,0 +1,48 @@
+{
+	"name": "Event sheet 3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "ReplayButton",
+					"sid": 973565228013503
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 902888576374301,
+					"parameters": {
+						"layout": "Main Game"
+					}
+				}
+			],
+			"sid": 937578245046082
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "QuitButton",
+					"sid": 678331812945152
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 145582926767243,
+					"parameters": {
+						"layout": "Main Menu"
+					}
+				}
+			],
+			"sid": 223493156654051
+		}
+	],
+	"sid": 850802060973395
+}

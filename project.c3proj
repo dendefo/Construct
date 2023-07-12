@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 34402,
+	"savedWithRelease": 35000,
 	"name": "Aion",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -136,7 +136,6 @@
 			"StartGame",
 			"Leave",
 			"Settings",
-			"Text",
 			"UIv",
 			"Audio",
 			"BackButton2",
@@ -148,7 +147,14 @@
 			"StartGame2",
 			"Text2",
 			"UIv2",
-			"Background"
+			"Background",
+			"Text3",
+			"TiledBackground2",
+			"TiledBackground3",
+			"Button",
+			"GameOverText",
+			"ReplayButton",
+			"QuitButton"
 		],
 		"subfolders": []
 	},
@@ -161,14 +167,16 @@
 	"layouts": {
 		"items": [
 			"Main Game",
-			"Main Menu"
+			"Main Menu",
+			"Game Over Screen"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"Event sheet 2"
+			"Event sheet 2",
+			"Event sheet 3"
 		],
 		"subfolders": []
 	},
@@ -339,7 +347,8 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"autoReloadScriptsOnPreview": false,
-		"exportFileStructure": "folders"
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,
