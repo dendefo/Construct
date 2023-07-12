@@ -12,6 +12,26 @@
 			"sid": 762369728634541
 		},
 		{
+			"eventType": "variable",
+			"name": "HasSpear",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 616812510977201
+		},
+		{
+			"eventType": "variable",
+			"name": "CanControlTime",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 962933491875731
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movement",
@@ -147,6 +167,14 @@
 							"parameters": {
 								"key": 17
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 667591366835189,
+							"parameters": {
+								"variable": "CanControlTime"
+							}
 						}
 					],
 					"actions": [],
@@ -229,16 +257,24 @@
 							"parameters": {
 								"key": 32
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 930829829981881,
+							"parameters": {
+								"variable": "HasSpear"
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Aion",
-							"sid": 847480550092987,
+							"sid": 476142892045328,
 							"parameters": {
 								"object": "Spear",
-								"layer": "0",
+								"layer": "1",
 								"image-point": "1",
 								"create-hierarchy": false
 							}
@@ -404,10 +440,10 @@
 						{
 							"id": "is-between-angles",
 							"objectClass": "Aion",
-							"sid": 683048186947290,
+							"sid": 192600234777199,
 							"parameters": {
 								"first-angle": "TiledBackground.Angle",
-								"second-angle": "45"
+								"second-angle": "-45"
 							}
 						}
 					],
@@ -452,6 +488,115 @@
 				}
 			],
 			"sid": 658232645839618
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 160041768209514
+				}
+			],
+			"actions": [
+				{
+					"id": "accelerate-toward-position",
+					"objectClass": "Enemy",
+					"sid": 739222050303487,
+					"behaviorType": "Custom",
+					"parameters": {
+						"acceleration": "5000",
+						"x": "Aion.X",
+						"y": "Enemy.Y"
+					}
+				}
+			],
+			"sid": 550790049707504
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "WeaponPowerUp",
+					"sid": 606637146662705,
+					"parameters": {
+						"object": "Aion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "WeaponPowerUp",
+					"sid": 172444629370954
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 310799501695794,
+					"parameters": {
+						"variable": "HasSpear",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 747090112182038
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "TimePowerUp",
+					"sid": 412732411453791,
+					"parameters": {
+						"object": "Aion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "TimePowerUp",
+					"sid": 757376961824406
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 281770325215548,
+					"parameters": {
+						"variable": "CanControlTime",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 204278767165231
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemy",
+					"sid": 160724538720083,
+					"parameters": {
+						"object": "Sprite2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reverse",
+					"objectClass": "Enemy",
+					"sid": 507957877707884,
+					"behaviorType": "Custom",
+					"parameters": {
+						"axes": "horizontally"
+					}
+				}
+			],
+			"sid": 471623919499045
 		}
 	],
 	"sid": 205840454689970

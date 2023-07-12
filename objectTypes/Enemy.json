@@ -8,12 +8,12 @@
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 909251963301328
+			"sid": 635248164071784
 		},
 		{
-			"behaviorId": "Physics",
-			"name": "Physics",
-			"sid": 752812233129087
+			"behaviorId": "custom",
+			"name": "Custom",
+			"sid": 869748509476171
 		}
 	],
 	"effectTypes": [],
@@ -24,8 +24,8 @@
 					{
 						"width": 74,
 						"height": 104,
-						"originX": 0.4594594594594595,
-						"originY": -0.6538461538461539,
+						"originX": 0.47297297297297297,
+						"originY": 0.46153846153846156,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -36,8 +36,8 @@
 					{
 						"width": 77,
 						"height": 107,
-						"originX": 0.44155844155844154,
-						"originY": -0.6074766355140186,
+						"originX": 0.47297297297297297,
+						"originY": 0.46153846153846156,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -48,8 +48,8 @@
 					{
 						"width": 74,
 						"height": 107,
-						"originX": 0.4594594594594595,
-						"originY": -0.6074766355140186,
+						"originX": 0.47297297297297297,
+						"originY": 0.46153846153846156,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -60,8 +60,8 @@
 					{
 						"width": 74,
 						"height": 107,
-						"originX": 0.4594594594594595,
-						"originY": -0.6074766355140186,
+						"originX": 0.47297297297297297,
+						"originY": 0.46153846153846156,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -72,8 +72,8 @@
 					{
 						"width": 71,
 						"height": 104,
-						"originX": 0.4788732394366197,
-						"originY": -0.6538461538461539,
+						"originX": 0.47297297297297297,
+						"originY": 0.46153846153846156,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
@@ -84,8 +84,8 @@
 					{
 						"width": 74,
 						"height": 104,
-						"originX": 0.4594594594594595,
-						"originY": -0.6538461538461539,
+						"originX": 0.47297297297297297,
+						"originY": 0.46153846153846156,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,

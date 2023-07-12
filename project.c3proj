@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 34402,
+	"savedWithRelease": 35000,
 	"name": "Aion",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -85,6 +85,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "custom",
+			"name": "Custom",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -148,7 +155,10 @@
 			"StartGame2",
 			"Text2",
 			"UIv2",
-			"Background"
+			"Background",
+			"WeaponPowerUp",
+			"TimePowerUp",
+			"Sprite2"
 		],
 		"subfolders": []
 	},
@@ -339,7 +349,8 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"autoReloadScriptsOnPreview": false,
-		"exportFileStructure": "folders"
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
 	},
 	"viewportWidth": 854,
 	"viewportHeight": 480,

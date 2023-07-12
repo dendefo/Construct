@@ -29,7 +29,7 @@
 					{
 						"width": 155,
 						"height": 125,
-						"originX": 0.7290322580645161,
+						"originX": 0.7483870967741936,
 						"originY": 0.456,
 						"originalSource": "",
 						"exportFormat": "lossless",
@@ -497,7 +497,7 @@
 				],
 				"sid": 711376819474914,
 				"name": "Run",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
