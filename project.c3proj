@@ -64,6 +64,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
@@ -87,13 +94,6 @@
 			"type": "behavior",
 			"id": "custom",
 			"name": "Custom",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "destroy",
-			"name": "Destroy outside layout",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -158,7 +158,8 @@
 			"Background",
 			"WeaponPowerUp",
 			"TimePowerUp",
-			"Sprite2"
+			"Sprite2",
+			"Text3"
 		],
 		"subfolders": []
 	},
@@ -170,15 +171,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Main Game",
-			"Main Menu"
+			"Game",
+			"Menu"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1",
-			"Event sheet 2"
+			"Game Sheet",
+			"Menu Sheet"
 		],
 		"subfolders": []
 	},

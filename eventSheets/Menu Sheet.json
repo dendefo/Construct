@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 2",
+	"name": "Menu Sheet",
 	"events": [
 		{
 			"eventType": "variable",
@@ -59,7 +59,7 @@
 					"objectClass": "System",
 					"sid": 422172569470460,
 					"parameters": {
-						"layout": "Main Game"
+						"layout": "Game"
 					}
 				}
 			],

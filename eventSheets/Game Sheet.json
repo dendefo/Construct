@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet 1",
+	"name": "Game Sheet",
 	"events": [
 		{
 			"eventType": "variable",
@@ -32,6 +32,26 @@
 			"sid": 962933491875731
 		},
 		{
+			"eventType": "variable",
+			"name": "SpearsInStack",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 182842468154979
+		},
+		{
+			"eventType": "variable",
+			"name": "TimeBeforeSpearDespawn",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 270761409022272
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movement",
@@ -60,7 +80,8 @@
 							}
 						}
 					],
-					"sid": 527789935673008
+					"sid": 527789935673008,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
@@ -118,6 +139,15 @@
 							"id": "destroy",
 							"objectClass": "Enemy",
 							"sid": 876311972931123
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 318347224463710,
+							"parameters": {
+								"variable": "SpearsInStack",
+								"value": "SpearsInStack+1"
+							}
 						}
 					],
 					"sid": 489604258156009
@@ -146,6 +176,31 @@
 						}
 					],
 					"sid": 796393504368078
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Spear",
+							"sid": 543658080983312,
+							"parameters": {
+								"object": "Sprite2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Spear",
+							"sid": 506586008808832,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 245643718011111
 				}
 			],
 			"sid": 489695648180693
@@ -186,7 +241,7 @@
 								{
 									"id": "compare-boolean-eventvar",
 									"objectClass": "System",
-									"sid": 391956229921575,
+									"sid": 895490256579518,
 									"parameters": {
 										"variable": "Moving"
 									}
@@ -265,9 +320,28 @@
 							"parameters": {
 								"variable": "HasSpear"
 							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 858220581766825,
+							"parameters": {
+								"first-value": "SpearsInStack",
+								"comparison": 4,
+								"second-value": "0"
+							}
 						}
 					],
 					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Aion",
+							"sid": 848483780522895,
+							"parameters": {
+								"animation": "\"Attack\"",
+								"from": "beginning"
+							}
+						},
 						{
 							"id": "spawn-another-object",
 							"objectClass": "Aion",
@@ -286,6 +360,15 @@
 							"behaviorType": "Bullet",
 							"parameters": {
 								"state": "enabled"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 606215169053212,
+							"parameters": {
+								"variable": "SpearsInStack",
+								"value": "SpearsInStack-1"
 							}
 						}
 					],
@@ -312,6 +395,28 @@
 									"parameters": {
 										"speed": "400"
 									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 981064759184279,
+									"parameters": {
+										"seconds": "TimeBeforeSpearDespawn"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spear",
+									"sid": 287370438745762
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 163147137289101,
+									"parameters": {
+										"variable": "SpearsInStack",
+										"value": "SpearsInStack+1"
+									}
 								}
 							],
 							"sid": 475822040737839
@@ -320,27 +425,45 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-boolean-eventvar",
+									"id": "else",
 									"objectClass": "System",
-									"sid": 512607307092562,
-									"parameters": {
-										"variable": "Moving"
-									},
-									"isInverted": true
+									"sid": 705099039324419
 								}
 							],
 							"actions": [
 								{
 									"id": "set-speed",
 									"objectClass": "Spear",
-									"sid": 755851614315083,
+									"sid": 514019378514891,
 									"behaviorType": "Bullet",
 									"parameters": {
 										"speed": "15"
 									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 238153006801002,
+									"parameters": {
+										"seconds": "TimeBeforeSpearDespawn"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Spear",
+									"sid": 145493778452914
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 509120147627038,
+									"parameters": {
+										"variable": "SpearsInStack",
+										"value": "SpearsInStack+1"
+									}
 								}
 							],
-							"sid": 410177448620766
+							"sid": 980449352856747
 						}
 					]
 				}
@@ -357,6 +480,15 @@
 				{
 					"eventType": "block",
 					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Aion",
+							"sid": 565424526449730,
+							"parameters": {
+								"animation": "\"Attack\""
+							},
+							"isInverted": true
+						},
 						{
 							"id": "compare-speed",
 							"objectClass": "Aion",
@@ -387,10 +519,10 @@
 						{
 							"id": "compare-speed",
 							"objectClass": "Aion",
-							"sid": 578876358784263,
+							"sid": 246906866982704,
 							"behaviorType": "Platform",
 							"parameters": {
-								"comparison": 0,
+								"comparison": 1,
 								"speed": "0"
 							}
 						}
@@ -410,7 +542,13 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 187599443210884
+						}
+					],
 					"actions": [
 						{
 							"id": "set-animation",
@@ -426,42 +564,6 @@
 				}
 			],
 			"sid": 485790582154003
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Camera",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-between-angles",
-							"objectClass": "Aion",
-							"sid": 192600234777199,
-							"parameters": {
-								"first-angle": "TiledBackground.Angle",
-								"second-angle": "-45"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "Aion",
-							"sid": 792576509959605,
-							"behaviorType": "ScrollTo",
-							"parameters": {
-								"state": "enabled"
-							}
-						}
-					],
-					"sid": 626538207172614
-				}
-			],
-			"sid": 123962581686346
 		},
 		{
 			"eventType": "block",

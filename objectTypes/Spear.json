@@ -11,11 +11,6 @@
 			"sid": 439171999229779
 		},
 		{
-			"behaviorId": "destroy",
-			"name": "DestroyOutsideLayout",
-			"sid": 879716545120544
-		},
-		{
 			"behaviorId": "jumpthru",
 			"name": "Jumpthru",
 			"sid": 222089910684230

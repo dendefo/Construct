@@ -96,7 +96,7 @@
 				],
 				"sid": 861523729538115,
 				"name": "Idle",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
