@@ -121,11 +121,19 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Enemy",
-							"sid": 650697604812552,
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spear",
+							"sid": 371960558618130,
 							"parameters": {
-								"object": "Spear"
+								"object": "Enemy"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Spear",
+							"sid": 372547544252294,
+							"parameters": {
+								"object": "Minotaur"
 							}
 						}
 					],
@@ -148,42 +156,35 @@
 								"variable": "SpearsInStack",
 								"value": "SpearsInStack+1"
 							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Minotaur",
+							"sid": 389956372640658,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "Minotaur.Health-1"
+							}
 						}
 					],
-					"sid": 489604258156009
+					"sid": 489604258156009,
+					"isOrBlock": true
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-collision-with-another-object",
+							"id": "is-overlapping-another-object",
 							"objectClass": "Spear",
-							"sid": 930913223188274,
+							"sid": 770182497609070,
 							"parameters": {
 								"object": "Ground"
 							}
-						}
-					],
-					"actions": [
+						},
 						{
-							"id": "set-enabled",
+							"id": "is-overlapping-another-object",
 							"objectClass": "Spear",
-							"sid": 185535935985753,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						}
-					],
-					"sid": 796393504368078
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Spear",
-							"sid": 543658080983312,
+							"sid": 306257778792998,
 							"parameters": {
 								"object": "Sprite2"
 							}
@@ -193,14 +194,15 @@
 						{
 							"id": "set-enabled",
 							"objectClass": "Spear",
-							"sid": 506586008808832,
+							"sid": 791822062342550,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"state": "disabled"
 							}
 						}
 					],
-					"sid": 245643718011111
+					"sid": 952538107003419,
+					"isOrBlock": true
 				}
 			],
 			"sid": 489695648180693
@@ -544,23 +546,26 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 187599443210884
+							"id": "on-animation-finished",
+							"objectClass": "Minotaur",
+							"sid": 538873418767399,
+							"parameters": {
+								"animation": "\"Attack\""
+							}
 						}
 					],
 					"actions": [
 						{
 							"id": "set-animation",
-							"objectClass": "Enemy",
-							"sid": 292069346410040,
+							"objectClass": "Minotaur",
+							"sid": 306041788060803,
 							"parameters": {
-								"animation": "\"Idle\"",
+								"animation": "\"IDLE\"",
 								"from": "beginning"
 							}
 						}
 					],
-					"sid": 942085275184484
+					"sid": 510585853572907
 				}
 			],
 			"sid": 485790582154003
@@ -699,6 +704,56 @@
 				}
 			],
 			"sid": 471623919499045
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 273574661202777,
+					"parameters": {
+						"first-value": "abs(Minotaur.X-Aion.X)",
+						"comparison": 2,
+						"second-value": "350"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Minotaur",
+					"sid": 629755870541070,
+					"parameters": {
+						"animation": "\"Attack\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 110609757175818
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 368335019310552,
+					"parameters": {
+						"first-value": "Minotaur.Health",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Minotaur",
+					"sid": 555766403768861
+				}
+			],
+			"sid": 694136702113712
 		}
 	],
 	"sid": 205840454689970

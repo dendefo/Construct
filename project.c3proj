@@ -159,7 +159,8 @@
 			"WeaponPowerUp",
 			"TimePowerUp",
 			"Sprite2",
-			"Text3"
+			"Text3",
+			"Minotaur"
 		],
 		"subfolders": []
 	},
