@@ -78,6 +78,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Physics",
 			"name": "Physics",
 			"author": "Scirra",
@@ -87,6 +94,13 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -159,13 +173,23 @@
 			"WeaponPowerUp",
 			"TimePowerUp",
 			"Sprite2",
-			"Text3",
-			"Minotaur"
+			"AmountOfSpears",
+			"Minotaur",
+			"SpearIcon",
+			"Canvas",
+			"SandWatch"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
-	"containers": [],
+	"containers": [
+		{
+			"members": [
+				"Canvas",
+				"SpearIcon"
+			]
+		}
+	],
 	"families": {
 		"items": [],
 		"subfolders": []

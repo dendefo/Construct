@@ -1,5 +1,5 @@
 {
-	"name": "Text3",
+	"name": "AmountOfSpears",
 	"plugin-id": "Text",
 	"sid": 528011331205197,
 	"isGlobal": false,
@@ -9,6 +9,11 @@
 			"behaviorId": "Anchor",
 			"name": "Anchor",
 			"sid": 784025417882988
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 128907196386211
 		}
 	],
 	"effectTypes": []

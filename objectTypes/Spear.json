@@ -14,6 +14,11 @@
 			"behaviorId": "jumpthru",
 			"name": "Jumpthru",
 			"sid": 222089910684230
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 308150943829849
 		}
 	],
 	"effectTypes": [],

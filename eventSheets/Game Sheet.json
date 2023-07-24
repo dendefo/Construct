@@ -165,6 +165,14 @@
 								"instance-variable": "Health",
 								"value": "Minotaur.Health-1"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "AmountOfSpears",
+							"sid": 739358185150627,
+							"parameters": {
+								"text": "SpearsInStack"
+							}
 						}
 					],
 					"sid": 489604258156009,
@@ -203,6 +211,110 @@
 					],
 					"sid": 952538107003419,
 					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "WeaponPowerUp",
+							"sid": 167461292165064,
+							"parameters": {
+								"object": "Aion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "start-fade",
+							"objectClass": "WeaponPowerUp",
+							"sid": 682292784968738,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 399778108312116,
+							"parameters": {
+								"variable": "HasSpear",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "AmountOfSpears",
+							"sid": 148419954965780,
+							"parameters": {
+								"text": "SpearsInStack"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "AmountOfSpears",
+							"sid": 299846086385925,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "SpearIcon",
+							"sid": 788987151660834,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SpearIcon",
+							"sid": 229088127883119,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 694512740537657
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "TimePowerUp",
+							"sid": 438826802616536,
+							"parameters": {
+								"object": "Aion"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 219455075297738,
+							"parameters": {
+								"variable": "CanControlTime",
+								"value": "true"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "TimePowerUp",
+							"sid": 122302720761314,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SandWatch",
+							"sid": 699112862009393,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "SandWatch",
+							"sid": 923224141234455,
+							"behaviorType": "Fade"
+						}
+					],
+					"sid": 662605072323378
 				}
 			],
 			"sid": 489695648180693
@@ -267,6 +379,11 @@
 										"variable": "Moving",
 										"value": "false"
 									}
+								},
+								{
+									"id": "stop-animation",
+									"objectClass": "SandWatch",
+									"sid": 791133243819188
 								}
 							],
 							"sid": 491469680511098
@@ -297,6 +414,14 @@
 									"parameters": {
 										"variable": "Moving",
 										"value": "true"
+									}
+								},
+								{
+									"id": "start-animation",
+									"objectClass": "SandWatch",
+									"sid": 717046474741716,
+									"parameters": {
+										"from": "current-frame"
 									}
 								}
 							],
@@ -372,6 +497,14 @@
 								"variable": "SpearsInStack",
 								"value": "SpearsInStack-1"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "AmountOfSpears",
+							"sid": 516291885098301,
+							"parameters": {
+								"text": "SpearsInStack"
+							}
 						}
 					],
 					"sid": 675700899580163,
@@ -399,25 +532,14 @@
 									}
 								},
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 981064759184279,
-									"parameters": {
-										"seconds": "TimeBeforeSpearDespawn"
-									}
-								},
-								{
-									"id": "destroy",
+									"id": "start-timer",
 									"objectClass": "Spear",
-									"sid": 287370438745762
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 163147137289101,
+									"sid": 654303524836037,
+									"behaviorType": "Timer",
 									"parameters": {
-										"variable": "SpearsInStack",
-										"value": "SpearsInStack+1"
+										"duration": "5",
+										"type": "once",
+										"tag": "\"Destroy\""
 									}
 								}
 							],
@@ -443,25 +565,14 @@
 									}
 								},
 								{
-									"id": "wait",
-									"objectClass": "System",
-									"sid": 238153006801002,
-									"parameters": {
-										"seconds": "TimeBeforeSpearDespawn"
-									}
-								},
-								{
-									"id": "destroy",
+									"id": "start-timer",
 									"objectClass": "Spear",
-									"sid": 145493778452914
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 509120147627038,
+									"sid": 220781218377503,
+									"behaviorType": "Timer",
 									"parameters": {
-										"variable": "SpearsInStack",
-										"value": "SpearsInStack+1"
+										"duration": "5",
+										"type": "once",
+										"tag": "\"Destroy\""
 									}
 								}
 							],
@@ -625,66 +736,6 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "WeaponPowerUp",
-					"sid": 606637146662705,
-					"parameters": {
-						"object": "Aion"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "WeaponPowerUp",
-					"sid": 172444629370954
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 310799501695794,
-					"parameters": {
-						"variable": "HasSpear",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 747090112182038
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "TimePowerUp",
-					"sid": 412732411453791,
-					"parameters": {
-						"object": "Aion"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "TimePowerUp",
-					"sid": 757376961824406
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 281770325215548,
-					"parameters": {
-						"variable": "CanControlTime",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 204278767165231
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
 					"objectClass": "Enemy",
 					"sid": 160724538720083,
 					"parameters": {
@@ -754,6 +805,45 @@
 				}
 			],
 			"sid": 694136702113712
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Spear",
+					"sid": 787441882494495,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Destroy\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Spear",
+					"sid": 620514193562662
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 455149185304043,
+					"parameters": {
+						"variable": "SpearsInStack",
+						"value": "SpearsInStack+1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "AmountOfSpears",
+					"sid": 181503406501692,
+					"parameters": {
+						"text": "SpearsInStack"
+					}
+				}
+			],
+			"sid": 603377975006684
 		}
 	],
 	"sid": 205840454689970
