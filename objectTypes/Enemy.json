@@ -3,7 +3,22 @@
 	"plugin-id": "Sprite",
 	"sid": 726420516390106,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 896249244287898
+		},
+		{
+			"name": "Vulnerable",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 149227320854210
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
@@ -14,6 +29,21 @@
 			"behaviorId": "custom",
 			"name": "Custom",
 			"sid": 869748509476171
+		},
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 331176517431066
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 403290432669318
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 562169555264261
 		}
 	],
 	"effectTypes": [],

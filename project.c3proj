@@ -85,8 +85,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Physics",
-			"name": "Physics",
+			"id": "Flash",
+			"name": "Flash",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -190,7 +190,9 @@
 			"Text3",
 			"Sprite3",
 			"Sprite4",
-			"Sprite5"
+			"Sprite5",
+			"Sprite6",
+			"HealthBar"
 		],
 		"subfolders": []
 	},

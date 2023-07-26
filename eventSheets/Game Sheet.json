@@ -121,575 +121,1211 @@
 			"sid": 577574016910866
 		},
 		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Collision",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Spear",
-							"sid": 371960558618130,
-							"parameters": {
-								"object": "Enemy"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Spear",
-							"sid": 372547544252294,
-							"parameters": {
-								"object": "Minotaur"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "Spear",
-							"sid": 397605132816303
-						},
-						{
-							"id": "destroy",
-							"objectClass": "Enemy",
-							"sid": 876311972931123
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 318347224463710,
-							"parameters": {
-								"variable": "SpearsInStack",
-								"value": "SpearsInStack+1"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Minotaur",
-							"sid": 389956372640658,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "Minotaur.Health-1"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "AmountOfSpears",
-							"sid": 739358185150627,
-							"parameters": {
-								"text": "SpearsInStack"
-							}
-						}
-					],
-					"sid": 489604258156009,
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Spear",
-							"sid": 770182497609070,
-							"parameters": {
-								"object": "Ground"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Spear",
-							"sid": 306257778792998,
-							"parameters": {
-								"object": "Sprite2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-enabled",
-							"objectClass": "Spear",
-							"sid": 791822062342550,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "disabled"
-							}
-						}
-					],
-					"sid": 952538107003419,
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "WeaponPowerUp",
-							"sid": 167461292165064,
-							"parameters": {
-								"object": "Aion"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "start-fade",
-							"objectClass": "WeaponPowerUp",
-							"sid": 682292784968738,
-							"behaviorType": "Fade"
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 399778108312116,
-							"parameters": {
-								"variable": "HasSpear",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "AmountOfSpears",
-							"sid": 148419954965780,
-							"parameters": {
-								"text": "SpearsInStack"
-							}
-						},
-						{
-							"id": "start-fade",
-							"objectClass": "AmountOfSpears",
-							"sid": 299846086385925,
-							"behaviorType": "Fade"
-						},
-						{
-							"id": "start-fade",
-							"objectClass": "SpearIcon",
-							"sid": 788987151660834,
-							"behaviorType": "Fade"
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "SpearIcon",
-							"sid": 229088127883119,
-							"parameters": {
-								"visibility": "visible"
-							}
-						}
-					],
-					"sid": 694512740537657
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "TimePowerUp",
-							"sid": 438826802616536,
-							"parameters": {
-								"object": "Aion"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 219455075297738,
-							"parameters": {
-								"variable": "CanControlTime",
-								"value": "true"
-							}
-						},
-						{
-							"id": "start-fade",
-							"objectClass": "TimePowerUp",
-							"sid": 122302720761314,
-							"behaviorType": "Fade"
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "SandWatch",
-							"sid": 699112862009393,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "start-fade",
-							"objectClass": "SandWatch",
-							"sid": 923224141234455,
-							"behaviorType": "Fade"
-						}
-					],
-					"sid": 662605072323378
-				}
-			],
-			"sid": 489695648180693
+			"eventType": "comment",
+			"text": "Collisions",
+			"background-color": [
+				1,
+				1,
+				1,
+				1
+			]
 		},
 		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Action keys",
-			"description": "",
-			"isActiveOnStart": true,
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Spear",
+					"sid": 615792689159197,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Spear",
+					"sid": 617243597279262,
+					"parameters": {
+						"object": "Minotaur"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Spear",
+					"sid": 417833641518043
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 602572780520418,
+					"parameters": {
+						"variable": "SpearsInStack",
+						"value": "SpearsInStack+1"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Minotaur",
+					"sid": 702331600727609,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "AmountOfSpears",
+					"sid": 122775008085086,
+					"parameters": {
+						"text": "SpearsInStack"
+					}
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Enemy",
+					"sid": 204233472844841,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Enemy",
+					"sid": 122492824426231,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "1.0",
+						"type": "once",
+						"tag": "\"Vulner\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Enemy",
+					"sid": 601519264953455,
+					"parameters": {
+						"instance-variable": "Vulnerable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Enemy",
+					"sid": 171287805029737,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "1.0"
+					}
+				}
+			],
+			"sid": 138611872679396,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
-						{
-							"id": "on-key-released",
-							"objectClass": "Keyboard",
-							"sid": 444068729537626,
-							"parameters": {
-								"key": 17
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 667591366835189,
-							"parameters": {
-								"variable": "CanControlTime"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 708322821397460,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 895490256579518,
-									"parameters": {
-										"variable": "Moving"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-speed",
-									"objectClass": "Spear",
-									"sid": 853703033673498,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"speed": "15"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 730456688523630,
-									"parameters": {
-										"variable": "Moving",
-										"value": "false"
-									}
-								},
-								{
-									"id": "stop-animation",
-									"objectClass": "SandWatch",
-									"sid": 791133243819188
-								}
-							],
-							"sid": 491469680511098
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 949696384171663
-								}
-							],
-							"actions": [
-								{
-									"id": "set-speed",
-									"objectClass": "Spear",
-									"sid": 649203374976929,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"speed": "400"
-									}
-								},
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 675539145542367,
-									"parameters": {
-										"variable": "Moving",
-										"value": "true"
-									}
-								},
-								{
-									"id": "start-animation",
-									"objectClass": "SandWatch",
-									"sid": 717046474741716,
-									"parameters": {
-										"from": "current-frame"
-									}
-								}
-							],
-							"sid": 364428721424642
-						}
-					]
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 536598814643216,
-							"parameters": {
-								"key": 32
-							}
-						},
-						{
-							"id": "compare-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 930829829981881,
-							"parameters": {
-								"variable": "HasSpear"
-							}
-						},
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 858220581766825,
+							"sid": 656226550888186,
 							"parameters": {
-								"first-value": "SpearsInStack",
-								"comparison": 4,
+								"first-value": "Minotaur.Health",
+								"comparison": 0,
 								"second-value": "0"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation",
-							"objectClass": "Aion",
-							"sid": 848483780522895,
-							"parameters": {
-								"animation": "\"Attack\"",
-								"from": "beginning"
-							}
-						},
+							"id": "destroy",
+							"objectClass": "Minotaur",
+							"sid": 115322297256296
+						}
+					],
+					"sid": 497959692589279
+				},
+				{
+					"eventType": "block",
+					"conditions": [
 						{
-							"id": "spawn-another-object",
-							"objectClass": "Aion",
-							"sid": 476142892045328,
-							"parameters": {
-								"object": "Spear",
-								"layer": "1",
-								"image-point": "1",
-								"create-hierarchy": false
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Spear",
-							"sid": 567782704314907,
-							"behaviorType": "Bullet",
-							"parameters": {
-								"state": "enabled"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
+							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 606215169053212,
+							"sid": 288254682002418,
 							"parameters": {
-								"variable": "SpearsInStack",
-								"value": "SpearsInStack-1"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "AmountOfSpears",
-							"sid": 516291885098301,
-							"parameters": {
-								"text": "SpearsInStack"
+								"first-value": "Enemy.Health",
+								"comparison": 0,
+								"second-value": "0"
 							}
 						}
 					],
-					"sid": 675700899580163,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 978655335229518,
-									"parameters": {
-										"variable": "Moving"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-speed",
-									"objectClass": "Spear",
-									"sid": 359014800202269,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"speed": "400"
-									}
-								},
-								{
-									"id": "start-timer",
-									"objectClass": "Spear",
-									"sid": 654303524836037,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "5",
-										"type": "once",
-										"tag": "\"Destroy\""
-									}
-								}
-							],
-							"sid": 475822040737839
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "else",
-									"objectClass": "System",
-									"sid": 705099039324419
-								}
-							],
-							"actions": [
-								{
-									"id": "set-speed",
-									"objectClass": "Spear",
-									"sid": 514019378514891,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"speed": "15"
-									}
-								},
-								{
-									"id": "start-timer",
-									"objectClass": "Spear",
-									"sid": 220781218377503,
-									"behaviorType": "Timer",
-									"parameters": {
-										"duration": "5",
-										"type": "once",
-										"tag": "\"Destroy\""
-									}
-								}
-							],
-							"sid": 980449352856747
+							"id": "destroy",
+							"objectClass": "Enemy",
+							"sid": 243541639042011
 						}
-					]
+					],
+					"sid": 322894727430139
 				}
 			],
-			"sid": 762274948391941
+			"isOrBlock": true
 		},
 		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Animations",
-			"description": "",
-			"isActiveOnStart": true,
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Spear",
+					"sid": 392424968761327,
+					"parameters": {
+						"object": "Ground"
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Spear",
+					"sid": 471451428650278,
+					"parameters": {
+						"object": "Sprite2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Spear",
+					"sid": 126436715130739,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 697708918541058,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "WeaponPowerUp",
+					"sid": 469976890444415,
+					"parameters": {
+						"object": "Aion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-fade",
+					"objectClass": "WeaponPowerUp",
+					"sid": 871306119843888,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 427108864925980,
+					"parameters": {
+						"variable": "HasSpear",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "AmountOfSpears",
+					"sid": 561966636936875,
+					"parameters": {
+						"text": "SpearsInStack"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "AmountOfSpears",
+					"sid": 864691167471494,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "SpearIcon",
+					"sid": 461801125718875,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SpearIcon",
+					"sid": 128092414161221,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 530641313118048
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "TimePowerUp",
+					"sid": 430064115567412,
+					"parameters": {
+						"object": "Aion"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 929485456154069,
+					"parameters": {
+						"variable": "CanControlTime",
+						"value": "true"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "TimePowerUp",
+					"sid": 808938858438678,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SandWatch",
+					"sid": 779352805959958,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "SandWatch",
+					"sid": 575325512391279,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 333837874561952
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Aion",
+					"sid": 593384367364376,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Aion",
+					"sid": 893784393938798,
+					"parameters": {
+						"instance-variable": "Vulnerable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Aion",
+					"sid": 570696067377335,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HealthBar",
+					"sid": 739091080452208,
+					"parameters": {
+						"frame-number": "Aion.Health"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Aion",
+					"sid": 806291254039685,
+					"parameters": {
+						"instance-variable": "Vulnerable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Aion",
+					"sid": 235600931393484,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "0.5",
+						"type": "once",
+						"tag": "\"Damage\""
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Aion",
+					"sid": 470278878142193,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.05",
+						"duration": "0.5"
+					}
+				}
+			],
+			"sid": 222661760575651
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Aion",
+					"sid": 103215235312257,
+					"parameters": {
+						"object": "Minotaur"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Aion",
+					"sid": 952270774413153,
+					"parameters": {
+						"instance-variable": "Vulnerable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Aion",
+					"sid": 409437667385992,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HealthBar",
+					"sid": 493712577690045,
+					"parameters": {
+						"frame-number": "Aion.Health"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Aion",
+					"sid": 867859261698321,
+					"parameters": {
+						"instance-variable": "Vulnerable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Aion",
+					"sid": 211036733750977,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "0.5",
+						"type": "once",
+						"tag": "\"Damage\""
+					}
+				}
+			],
+			"sid": 616564986433105
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Aion",
+					"sid": 546568025004242,
+					"parameters": {
+						"object": "Ancient_Greece_Vase__Seamless_Pattern3"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Aion",
+					"sid": 797937327070896,
+					"parameters": {
+						"instance-variable": "Vulnerable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "Aion",
+					"sid": 300977827109322,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HealthBar",
+					"sid": 983967038397185,
+					"parameters": {
+						"frame-number": "Aion.Health"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Aion",
+					"sid": 147933613765104,
+					"parameters": {
+						"instance-variable": "Vulnerable",
+						"value": "false"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "Aion",
+					"sid": 712483623078164,
+					"behaviorType": "Timer",
+					"parameters": {
+						"duration": "0.5",
+						"type": "once",
+						"tag": "\"Damage\""
+					}
+				}
+			],
+			"sid": 567119245617915
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-frame-changed",
+					"objectClass": "Aion",
+					"sid": 509895749168515
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Aion",
+					"sid": 923301070182012,
+					"parameters": {
+						"animation": "\"Attack\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 880039780359601,
 			"children": [
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-animation-playing",
-							"objectClass": "Aion",
-							"sid": 565424526449730,
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Enemy",
+							"sid": 529197548386049,
 							"parameters": {
-								"animation": "\"Attack\""
-							},
-							"isInverted": true
+								"instance-variable": "Vulnerable"
+							}
 						},
 						{
-							"id": "compare-speed",
-							"objectClass": "Aion",
-							"sid": 155606448943097,
-							"behaviorType": "Platform",
+							"id": "pick-overlapping-point",
+							"objectClass": "System",
+							"sid": 363265243014683,
 							"parameters": {
-								"comparison": 0,
-								"speed": "0"
+								"object": "Enemy",
+								"x": "Aion.ImagePointX(\"Weapon\")",
+								"y": "Aion.ImagePointY(\"Weapon\")"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation",
-							"objectClass": "Aion",
-							"sid": 775870814886021,
+							"id": "subtract-from-instvar",
+							"objectClass": "Enemy",
+							"sid": 922430382271602,
 							"parameters": {
-								"animation": "\"Idle\"",
-								"from": "beginning"
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Enemy",
+							"sid": 688375341064720,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "1.0",
+								"type": "once",
+								"tag": "\"Vulner\""
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Enemy",
+							"sid": 927401935678761,
+							"parameters": {
+								"instance-variable": "Vulnerable",
+								"value": "false"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Enemy",
+							"sid": 854651396540960,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "1.0"
 							}
 						}
 					],
-					"sid": 589950799089250
+					"sid": 401822398428172
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-speed",
-							"objectClass": "Aion",
-							"sid": 246906866982704,
-							"behaviorType": "Platform",
+							"id": "pick-overlapping-point",
+							"objectClass": "System",
+							"sid": 288956992528692,
 							"parameters": {
-								"comparison": 1,
-								"speed": "0"
+								"object": "Minotaur",
+								"x": "Aion.ImagePointX(\"Weapon\")",
+								"y": "Aion.ImagePointY(\"Weapon\")"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-animation",
-							"objectClass": "Aion",
-							"sid": 827391977778518,
+							"id": "subtract-from-instvar",
+							"objectClass": "Minotaur",
+							"sid": 339315380545647,
 							"parameters": {
-								"animation": "\"Run\"",
-								"from": "beginning"
+								"instance-variable": "Health",
+								"value": "1"
 							}
 						}
 					],
-					"sid": 493088461111819
+					"sid": 208323086015590,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Action Keys",
+			"background-color": [
+				1,
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Keyboard",
+					"sid": 262569497892706,
+					"parameters": {
+						"key": 17
+					}
 				},
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-animation-finished",
-							"objectClass": "Minotaur",
-							"sid": 538873418767399,
-							"parameters": {
-								"animation": "\"Attack\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-animation",
-							"objectClass": "Minotaur",
-							"sid": 306041788060803,
-							"parameters": {
-								"animation": "\"IDLE\"",
-								"from": "beginning"
-							}
-						}
-					],
-					"sid": 510585853572907
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 217043545336407,
+					"parameters": {
+						"variable": "CanControlTime"
+					}
 				}
 			],
-			"sid": 485790582154003
+			"actions": [],
+			"sid": 225490987783895,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 286932169143796,
+							"parameters": {
+								"variable": "Moving"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Spear",
+							"sid": 215985908204276,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "15"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 758935229285149,
+							"parameters": {
+								"variable": "Moving",
+								"value": "false"
+							}
+						},
+						{
+							"id": "stop-animation",
+							"objectClass": "SandWatch",
+							"sid": 144548689727865
+						}
+					],
+					"sid": 510605071015930
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 833495051853774
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Spear",
+							"sid": 906298752396216,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "400"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 948620100004832,
+							"parameters": {
+								"variable": "Moving",
+								"value": "true"
+							}
+						},
+						{
+							"id": "start-animation",
+							"objectClass": "SandWatch",
+							"sid": 915538377807850,
+							"parameters": {
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 342221199822114
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 432718374810567,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 221586033358639,
+					"parameters": {
+						"variable": "HasSpear"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 599686263520768,
+					"parameters": {
+						"first-value": "SpearsInStack",
+						"comparison": 4,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Aion",
+					"sid": 313017382710723,
+					"parameters": {
+						"object": "Spear",
+						"layer": "1",
+						"image-point": "1",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Spear",
+					"sid": 628647657813574,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 388057512525505,
+					"parameters": {
+						"variable": "SpearsInStack",
+						"value": "SpearsInStack-1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "AmountOfSpears",
+					"sid": 522692013007143,
+					"parameters": {
+						"text": "SpearsInStack"
+					}
+				}
+			],
+			"sid": 734519473583808,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 644241909074138,
+							"parameters": {
+								"variable": "Moving"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Spear",
+							"sid": 871762357036145,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "400"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Spear",
+							"sid": 490731371304883,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "5",
+								"type": "once",
+								"tag": "\"Destroy\""
+							}
+						}
+					],
+					"sid": 506820170198654
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 800592107959011
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Spear",
+							"sid": 344687991075416,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "15"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Spear",
+							"sid": 222825996011658,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "5",
+								"type": "once",
+								"tag": "\"Destroy\""
+							}
+						}
+					],
+					"sid": 318097714721994
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 673749710958893,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Aion",
+					"sid": 991627234522312,
+					"parameters": {
+						"animation": "\"Attack\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 981632541870525
+		},
+		{
+			"eventType": "comment",
+			"text": "Animations",
+			"background-color": [
+				1,
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Aion",
+					"sid": 294270532059149,
+					"parameters": {
+						"animation": "\"Attack\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-speed",
+					"objectClass": "Aion",
+					"sid": 225076240679304,
+					"behaviorType": "Platform",
+					"parameters": {
+						"comparison": 0,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Aion",
+					"sid": 321816093447475,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 778532507409255
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "Aion",
+					"sid": 671239262228880,
+					"parameters": {
+						"animation": "\"Attack\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-speed",
+					"objectClass": "Aion",
+					"sid": 844658967567263,
+					"behaviorType": "Platform",
+					"parameters": {
+						"comparison": 1,
+						"speed": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Aion",
+					"sid": 487129847744514,
+					"parameters": {
+						"animation": "\"Run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 173815984553323
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Aion",
+					"sid": 662741397819418,
+					"parameters": {
+						"animation": "\"Attack\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Aion",
+					"sid": 213251570516867,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 510061850028493
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "Minotaur",
+					"sid": 294644917462103,
+					"parameters": {
+						"animation": "\"Attack\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Minotaur",
+					"sid": 121821565451284,
+					"parameters": {
+						"animation": "\"IDLE\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 411106401667047
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 846947431591889,
+					"parameters": {
+						"first-value": "abs(Minotaur.X-Aion.X)",
+						"comparison": 2,
+						"second-value": "350"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Minotaur",
+					"sid": 858255974986583,
+					"parameters": {
+						"animation": "\"Attack\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 746453449902482
+		},
+		{
+			"eventType": "comment",
+			"text": "Enemy Control",
+			"background-color": [
+				1,
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each",
+					"objectClass": "System",
+					"sid": 235186318156554,
+					"parameters": {
+						"object": "Enemy"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 408925743298720,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 558015461565263,
+							"parameters": {
+								"first-value": "abs(Enemy.Y-Aion.Y)",
+								"comparison": 2,
+								"second-value": "100"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 402160905580408,
+							"parameters": {
+								"first-value": "Enemy.X",
+								"comparison": 4,
+								"second-value": "Aion.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 199216674944172,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 111508566528768
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 177060919590726
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 730280873555473,
+							"parameters": {
+								"first-value": "abs(Enemy.Y-Aion.Y)",
+								"comparison": 2,
+								"second-value": "200"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 756951496929926,
+							"parameters": {
+								"first-value": "Enemy.X",
+								"comparison": 2,
+								"second-value": "Aion.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 229666749511058,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 630592047554532
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 651429103928657,
+							"parameters": {
+								"first-value": "Enemy.Y",
+								"comparison": 5,
+								"second-value": "Aion.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 930273769584558,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 869261245254240
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy",
+							"sid": 175518199555043,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemy",
+							"sid": 293130593451706
+						}
+					],
+					"sid": 133056736082265
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Other",
+			"background-color": [
+				1,
+				1,
+				1,
+				1
+			]
 		},
 		{
 			"eventType": "block",
@@ -716,105 +1352,6 @@
 				}
 			],
 			"sid": 658232645839618
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 160041768209514
-				}
-			],
-			"actions": [
-				{
-					"id": "accelerate-toward-position",
-					"objectClass": "Enemy",
-					"sid": 739222050303487,
-					"behaviorType": "Custom",
-					"parameters": {
-						"acceleration": "5000",
-						"x": "Aion.X",
-						"y": "Enemy.Y"
-					}
-				}
-			],
-			"sid": 550790049707504
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "Enemy",
-					"sid": 160724538720083,
-					"parameters": {
-						"object": "Sprite2"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "reverse",
-					"objectClass": "Enemy",
-					"sid": 507957877707884,
-					"behaviorType": "Custom",
-					"parameters": {
-						"axes": "horizontally"
-					}
-				}
-			],
-			"sid": 471623919499045
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 273574661202777,
-					"parameters": {
-						"first-value": "abs(Minotaur.X-Aion.X)",
-						"comparison": 2,
-						"second-value": "350"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-animation",
-					"objectClass": "Minotaur",
-					"sid": 629755870541070,
-					"parameters": {
-						"animation": "\"Attack\"",
-						"from": "beginning"
-					}
-				}
-			],
-			"sid": 110609757175818
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 368335019310552,
-					"parameters": {
-						"first-value": "Minotaur.Health",
-						"comparison": 0,
-						"second-value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "Minotaur",
-					"sid": 555766403768861
-				}
-			],
-			"sid": 694136702113712
 		},
 		{
 			"eventType": "block",
@@ -857,9 +1394,81 @@
 		},
 		{
 			"eventType": "block",
-			"conditions": [],
-			"actions": [],
-			"sid": 994990476816319
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 484207192747057,
+					"parameters": {
+						"first-value": "Aion.Health",
+						"comparison": 0,
+						"second-value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 450053836097459,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 748244717793430
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Enemy",
+					"sid": 316775705531272,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Vulner\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Enemy",
+					"sid": 808090590392638,
+					"parameters": {
+						"instance-variable": "Vulnerable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 407247815367663
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-timer",
+					"objectClass": "Aion",
+					"sid": 853411249238183,
+					"behaviorType": "Timer",
+					"parameters": {
+						"tag": "\"Damage\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Aion",
+					"sid": 994322124285712,
+					"parameters": {
+						"instance-variable": "Vulnerable",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 940576585656843
 		}
 	],
 	"sid": 205840454689970
