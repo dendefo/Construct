@@ -126,10 +126,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 2972,
-						"y": -637,
-						"width": 1010.785,
-						"height": 135.3625,
+						"x": 2980,
+						"y": -671,
+						"width": 1140.7849999999999,
+						"height": 155.3625,
 						"originX": 0.5,
 						"originY": -1.8615384615384616,
 						"color": [
@@ -632,8 +632,8 @@
 						}
 					},
 					"world": {
-						"x": 779,
-						"y": 718,
+						"x": 1373,
+						"y": 772,
 						"width": 67.72123570682493,
 						"height": 60.59609069234549,
 						"originX": 0.47297297297297297,
@@ -844,8 +844,8 @@
 						}
 					},
 					"world": {
-						"x": 906,
-						"y": -100,
+						"x": 907,
+						"y": -98,
 						"width": 59.4236800333801,
 						"height": 59.4236800333801,
 						"originX": 0.5,
@@ -948,7 +948,7 @@
 					},
 					"world": {
 						"x": -1015,
-						"y": -1067,
+						"y": -1068,
 						"width": 52.746467753978365,
 						"height": 52.746467753978365,
 						"originX": 0.5,
@@ -1084,8 +1084,8 @@
 						}
 					},
 					"world": {
-						"x": 319,
-						"y": 772,
+						"x": 331,
+						"y": 766,
 						"width": 100.736517313892,
 						"height": 57.95624723919246,
 						"originX": 0.78,
@@ -2442,57 +2442,14 @@
 					}
 				},
 				{
-					"type": "Exit",
-					"properties": {
-						"text": "EXIT",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 72,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 12,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 3896,
-						"y": -622,
-						"width": 218,
-						"height": 156,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Text3",
 					"properties": {
 						"text": "USE SPEARS TO CLIMP WALLS AND HIT ENEMIES (SPACE BAR)",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Ink Free",
 						"size": 12,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
 							0,
@@ -2532,10 +2489,10 @@
 					"properties": {
 						"text": "USE TIME CONTROL TO USE SPEARS AS PLATFORMS AND SLOW TIME (CTRL)",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Ink Free",
 						"size": 12,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
 							0,
@@ -2686,8 +2643,8 @@
 						}
 					},
 					"world": {
-						"x": 3652,
-						"y": -457,
+						"x": 2398,
+						"y": -461,
 						"width": 67.72123570682493,
 						"height": 60.59609069234549,
 						"originX": 0.47297297297297297,
@@ -3043,6 +3000,413 @@
 						"height": 62.38382828478087,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text4",
+					"properties": {
+						"text": "You can move with the arrow keys",
+						"enable-bbcode": true,
+						"font": "Ink Free",
+						"size": 12,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 88,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 216,
+						"y": 693,
+						"width": 264.4914851374515,
+						"height": 35.511820353855,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text4",
+					"properties": {
+						"text": "You can Jump with Up key",
+						"enable-bbcode": true,
+						"font": "Ink Free",
+						"size": 12,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 90,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 950,
+						"y": 663,
+						"width": 107.47452300468967,
+						"height": 71.511820353855,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ground",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 12,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 3927,
+						"y": -768,
+						"width": 639,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Ground",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 91,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Jumpthru": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 4427,
+						"y": -400,
+						"width": 636,
+						"height": 34,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text4",
+					"properties": {
+						"text": "You can attack with A",
+						"enable-bbcode": true,
+						"font": "Ink Free",
+						"size": 12,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 92,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 525,
+						"y": 693,
+						"width": 264.4914851374515,
+						"height": 35.511820353855,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text3",
+					"properties": {
+						"text": "You'll need Both powers to advance!",
+						"enable-bbcode": true,
+						"font": "Ink Free",
+						"size": 12,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 103,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1988,
+						"y": -467,
+						"width": 263.6710505727367,
+						"height": 33,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Enemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 104,
+					"instanceVariables": {
+						"Health": 2,
+						"Vulnerable": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Custom": {
+							"properties": {
+								"stepping-mode": "linear",
+								"pixels-per-step": 5,
+								"enabled": true
+							}
+						},
+						"Platform": {
+							"properties": {
+								"max-speed": 150,
+								"acceleration": 1000,
+								"deceleration": 1000,
+								"jump-strength": 400,
+								"gravity": 1500,
+								"max-fall-speed": 400,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"Timer": {
+							"properties": {}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 3661,
+						"y": -466,
+						"width": 67.72123570682493,
+						"height": 60.59609069234549,
+						"originX": 0.47297297297297297,
+						"originY": 0.46153846153846156,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.003715595619995238,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite7",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 105,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": -1096,
+						"y": -796,
+						"width": 96,
+						"height": 108,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite8",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 116,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2138.328,
+						"y": 865.4598540145986,
+						"width": 224,
+						"height": 231,
+						"originX": -8.128,
+						"originY": 6.547445255474453,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Sprite8",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 117,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 2138.328,
+						"y": 865.4598540145986,
+						"width": 224,
+						"height": 231,
+						"originX": -8.128,
+						"originY": 6.547445255474453,
 						"color": [
 							1,
 							1,

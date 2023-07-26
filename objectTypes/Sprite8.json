@@ -1,7 +1,7 @@
 {
-	"name": "Ancient_Greece_Vase__Seamless_Pattern3",
+	"name": "Sprite8",
 	"plugin-id": "Sprite",
-	"sid": 302225235178036,
+	"sid": 962292375426303,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,32 +11,44 @@
 			{
 				"frames": [
 					{
-						"width": 402,
-						"height": 65,
-						"originX": 0.5,
-						"originY": -1.8615384615384616,
+						"width": 125,
+						"height": 137,
+						"originX": -8.128,
+						"originY": 6.547445255474453,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2595667,
+						"imageSpriteId": 8400831,
 						"collisionPoly": {
 							"points": [
 								0,
-								0.31538464472844047,
-								1,
-								0.31538435129018927,
-								1,
-								0.6846155019906853,
 								0,
-								0.6538461538461541
+								0,
+								0,
+								1,
+								0.21897810218978103,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								1,
+								0,
+								1,
+								0,
+								1,
+								0,
+								1
 							]
 						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 830414600536802,
-				"name": "Default",
+				"sid": 191147107266297,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

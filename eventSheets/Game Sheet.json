@@ -569,10 +569,10 @@
 				{
 					"id": "subtract-from-instvar",
 					"objectClass": "Aion",
-					"sid": 300977827109322,
+					"sid": 355546659359915,
 					"parameters": {
 						"instance-variable": "Health",
-						"value": "1"
+						"value": "5"
 					}
 				},
 				{
@@ -1410,9 +1410,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 450053836097459,
+					"sid": 235431553272201,
 					"parameters": {
-						"layout": "Menu"
+						"layout": "Death Screen"
 					}
 				}
 			],
@@ -1469,6 +1469,46 @@
 				}
 			],
 			"sid": 940576585656843
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Aion",
+					"sid": 695851461815642,
+					"parameters": {
+						"object": "Sprite8"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Aion",
+					"sid": 818074633567540,
+					"parameters": {
+						"instance-variable": "Vulnerable"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 921902456664217,
+					"parameters": {
+						"layout": "End Screen"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "Sprite9",
+					"sid": 223942672919209,
+					"parameters": {
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 671385112513426
 		}
 	],
 	"sid": 205840454689970
