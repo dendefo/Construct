@@ -187,7 +187,10 @@
 			"Ancient_Greece_Vase__Seamless_Pattern2",
 			"Ancient_Greece_Vase__Seamless_Pattern3",
 			"Exit",
-			"Text3"
+			"Text3",
+			"Sprite3",
+			"Sprite4",
+			"Sprite5"
 		],
 		"subfolders": []
 	},

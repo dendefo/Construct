@@ -52,6 +52,16 @@
 			"sid": 270761409022272
 		},
 		{
+			"eventType": "variable",
+			"name": "IsJumping",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 615319666451167
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Movement",
@@ -844,6 +854,12 @@
 				}
 			],
 			"sid": 603377975006684
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 994990476816319
 		}
 	],
 	"sid": 205840454689970
