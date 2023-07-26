@@ -1,36 +1,42 @@
 {
-	"name": "Sprite2",
+	"name": "greekVaseBackground",
 	"plugin-id": "Sprite",
-	"sid": 526214566575278,
+	"sid": 968108861152060,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 292488846339104
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 614,
+						"height": 392,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.5051020408163265,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5564897,
+						"imageSpriteId": 2340736,
+						"collisionPoly": {
+							"points": [
+								0.0016286644951140066,
+								0,
+								0.998371335504886,
+								0,
+								0.998371335504886,
+								1,
+								0.0016286644951140066,
+								1
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 234631783713611,
-				"name": "Animation 1",
+				"sid": 665002118378041,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

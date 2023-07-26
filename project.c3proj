@@ -177,7 +177,17 @@
 			"Minotaur",
 			"SpearIcon",
 			"Canvas",
-			"SandWatch"
+			"SandWatch",
+			"TiledBackground2",
+			"TiledBackground3",
+			"TiledBackground4",
+			"greekVaseBackground",
+			"TiledBackground5",
+			"Ancient_Greece_Vase__Seamless_Pattern",
+			"Ancient_Greece_Vase__Seamless_Pattern2",
+			"Ancient_Greece_Vase__Seamless_Pattern3",
+			"Exit",
+			"Text3"
 		],
 		"subfolders": []
 	},
